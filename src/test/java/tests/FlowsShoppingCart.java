@@ -1,12 +1,14 @@
 package tests;
 
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
 
-//@CucumberOptions(features = "src/test/resources/appFeatures/LoginPage.feature", glue = {"stepDefinitions", "BaseTest"})
-public class FlowsShoppingCart extends BaseTest{
-    LoginPage loginPage;
+@CucumberOptions(features = "src/test/resources/appFeatures/LoginPage.feature", glue = {"stepDefinitions", "BaseTest"})
+public class FlowsShoppingCart extends AbstractTestNGCucumberTests {
+    /*LoginPage loginPage;
     HomePage homePage;
     CartPage cartPage;
     CheckoutOnePage checkoutOnePage;
@@ -45,5 +47,5 @@ public class FlowsShoppingCart extends BaseTest{
         cartPage = homePage.clickOnShoppingCartIcon();
         cartPage.getProductList();
         Assert.assertTrue(cartPage.validateEmptyList(),"The shopping cart is empty");
-    }
+    }*/
 }

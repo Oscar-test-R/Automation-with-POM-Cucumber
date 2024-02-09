@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-04T23:51:22 COT" name="Suite" finished-at="2024-02-04T23:51:26 COT" duration-ms="3976">
+    <groups>
+    </groups>
+    <test started-at="2024-02-04T23:51:22 COT" name="Test" finished-at="2024-02-04T23:51:26 COT" duration-ms="3976">
+      <class name="tests.FlowsShoppingCart">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:tests.FlowsShoppingCart@4d154ccd]" started-at="2024-02-04T23:51:22 COT" name="beforeTest" finished-at="2024-02-04T23:51:26 COT" duration-ms="3244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="deleteCartProducts(java.lang.String,java.lang.String)[pri:0, instance:tests.FlowsShoppingCart@4d154ccd]" started-at="2024-02-04T23:51:26 COT" name="deleteCartProducts" data-provider="data" finished-at="2024-02-04T23:51:26 COT" duration-ms="577" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCartProducts -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.FlowsShoppingCart@4d154ccd]" started-at="2024-02-04T23:51:26 COT" name="afterTest" finished-at="2024-02-04T23:51:26 COT" duration-ms="124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- tests.FlowsShoppingCart -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

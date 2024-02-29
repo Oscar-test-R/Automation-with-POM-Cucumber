@@ -1,32 +1,36 @@
 package stepDefinitions;
 
+import dataProvider.DataProvider;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import myDriver.MyDriver;
 import org.testng.Assert;
 import pages.HomePage;
 import pages.LoginPage;
-import tests.BaseTest;
 
-public class LoginPageSteps {
-    BaseTest baseTest;
+import java.util.HashMap;
+
+public class LoginPageSteps extends BaseStep{
     LoginPage loginPage;
     HomePage homePage;
+    protected MyDriver driver;
+
     @Given ("I am on the login page")
-    public void IAmOnTheLoginPage() {
-        loginPage = baseTest.loadFirstPage();
+    public void theLoginPage() {
+        loginPage = loadFirstPage();
     }
-    @When("I enter valid credentials username {string} and password {string}")
-    public void IEnterValidCredentials(String userName, String password){
+    @When("I enter valid credentials {string} and password {string}")
+    public void enterValidCredentials(String userName, String password){
         loginPage.typeCredentials(userName, password);
     }
     @And ("I click on the login button")
     public void IClickOnTheLoginButton(){
         homePage = loginPage.clickLoginButton();
     }
-    @Then ("{string} message is displayed to confirm the user is on the home page")
-    public void IShouldBeOnTheHomePage (String title){
-        Assert.assertTrue(homePage.isHomeTitleCorrect(title), "The title is not the same");
+    @Then ("message is displayed to confirm the user is on the home page")
+    public void IShouldBeOnTheHomePage (){
+        Assert.assertTrue(homePage.isHomeTitleCorrect((String) getData().get("Login Message")), "The title is not the same");
     }
 }

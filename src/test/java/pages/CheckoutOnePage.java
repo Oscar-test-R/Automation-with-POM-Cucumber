@@ -16,13 +16,10 @@ public class CheckoutOnePage extends BasePage{
     private WebElement txtPostalCode;
     @FindBy (css = "input[type='submit']")
     private WebElement continueButton;
-    private String firstName = "Test";
-    private String lasttName = "Automation";
-    private String postalCode = "111111";
-    public CheckoutOnePage fieldInputsCheckout (){
+    public CheckoutOnePage fieldInputsCheckout (String firstName, String lastName, String postalCode){
         waitElementBeClickable(txtFirstName);
         txtFirstName.sendKeys(firstName);
-        txtLastName.sendKeys(lasttName);
+        txtLastName.sendKeys(lastName);
         txtPostalCode.sendKeys(postalCode);
         return this;
     }

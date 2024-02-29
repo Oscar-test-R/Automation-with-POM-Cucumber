@@ -26,8 +26,8 @@ public class LoginPage extends BasePage{
         loginButton.click();
         return new HomePage(super.getDriver());
     }
-    public String validateTitlePage (){
+    public boolean validateTitlePage (String titlePage){
         getWait().until(ExpectedConditions.visibilityOf(titleLoginPage));
-        return titleLoginPage.getText();
+        return titleLoginPage.getText().equals(titlePage);
     }
 }

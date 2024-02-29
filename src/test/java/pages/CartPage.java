@@ -22,42 +22,6 @@ public class CartPage extends BasePage{
             waitElementBeClickable(removeButton);
             removeButton.click();
         }
-        /*waitElementBeClickable(removeButton);
-        removeButton.click();
-        getWait().until(ExpectedConditions.invisibilityOf(removeButton));*/
-        /*List<WebElement> list = listCartProducts.findElements(By.cssSelector(".cart_item"));
-        System.out.println(list + " \n"+ " " + list.size());
-        for(int i = 0; i < list.size(); i++){
-            System.out.println(removeButton);
-            removeButton = list.get(i);
-            System.out.println("Eliminando elemento: " + removeButton);
-            try {
-                waitElementBeClickable(removeButton);
-                if(removeButton.isDisplayed() && removeButton.isEnabled()){
-                    Actions action = new Actions(getDriver());
-                    action.moveToElement(removeButton).click().perform();
-                    //action.click(removeButton);
-                    ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", removeButton);
-                    ((JavascriptExecutor)getDriver()).executeScript("arguments[0].checked = true;", removeButton);
-                    //removeButton.click();
-                    System.out.println("Flag 1");
-                    //getWait().until(ExpectedConditions.stalenessOf(removeButton));
-                    getWait().until(ExpectedConditions.invisibilityOf(removeButton));
-
-                    System.out.println("Flag 2");
-                }else {
-                    System.out.println("Elemento no visible o no habilitado");
-                }
-            }catch (TimeoutException e){
-                e.printStackTrace();
-                System.out.println("The element can not be clicked");
-            }
-        }
-        if(list.size() == 0){
-            System.out.println("The cart is empty");
-        }else {
-            System.out.println(list + "\n" + "The cart has " + list.size());
-        }*/
         return this;
     }
     public boolean validateEmptyList(){

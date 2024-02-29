@@ -1,0 +1,11 @@
+    {
+    "User Name": "standard_user",
+    "Password": "secret_sauce",
+    "First Name": "Test",
+    "Last Name": "Second",
+    "Zip Code": "111111",
+    "Successful Buy Message": "Thank you for your order!",
+    "Login Message": "Swag Labs",
+    "Logout Message": "Swag Labs",
+    "Cart Empty Message": "The shopping cart is empty"
+    }

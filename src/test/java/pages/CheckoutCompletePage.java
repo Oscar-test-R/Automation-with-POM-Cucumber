@@ -11,8 +11,7 @@ public class CheckoutCompletePage extends BasePage{
     }
     @FindBy (css = "h2.complete-header")
     private WebElement thankYouTitle;
-    public boolean isTheTitleTheSame(){
-        String title = "Thank you for your order!";
+    public boolean isTheTitleTheSame(String title){
         getWait().until(ExpectedConditions.visibilityOf(thankYouTitle));
         return thankYouTitle.isDisplayed() && thankYouTitle.getText().equals(title);
     }
